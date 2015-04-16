@@ -5,6 +5,7 @@ import java.net.*;
 import java.io.*;
 
 public class FreeWeekChampRotation {
+	//reads the text from a URL
     public static String getText(String url) throws Exception {
         URL website = new URL(url);
         URLConnection connection = website.openConnection();
@@ -53,12 +54,12 @@ public class FreeWeekChampRotation {
     	}
     }
     
-    public static String printID(int a) throws Exception
+    public static String printID(int a) throws Exception //finds the champ ID
     {
             return FreeWeekChampRotation.getText("https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion/"+ a + "?api_key=491b6446-c673-4e8a-a877-2568ad964a6a");
     }
     
-    public static String IDtoChamp(String id)
+    public static String IDtoChamp(String id) //finds the name of the champion with the ID
     {
     	int index = id.indexOf("\"name\"") + 8;
     	String champName = "";
