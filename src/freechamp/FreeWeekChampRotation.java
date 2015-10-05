@@ -26,7 +26,7 @@ public class FreeWeekChampRotation {
 
     public static void main(String[] args) throws Exception {
     	//free champ rotation
-        String content = FreeWeekChampRotation.getText("https://na.api.pvp.net/api/lol/na/v1.2/champion?freeToPlay=true&api_key=491b6446-c673-4e8a-a877-2568ad964a6a");
+        String content = FreeWeekChampRotation.getText("https://na.api.pvp.net/api/lol/na/v1.2/champion?freeToPlay=true&api_key=<API KEY>");
         //System.out.println(content);
         int[] id = new int[11];
         int n = 0;
@@ -56,7 +56,7 @@ public class FreeWeekChampRotation {
     
     public static String printID(int a) throws Exception //finds the champ ID
     {
-            return FreeWeekChampRotation.getText("https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion/"+ a + "?api_key=491b6446-c673-4e8a-a877-2568ad964a6a");
+            return FreeWeekChampRotation.getText("https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion/"+ a + "?api_key=<API KEY>");
     }
     
     public static String IDtoChamp(String id) //finds the name of the champion with the ID
